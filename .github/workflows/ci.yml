@@ -1,34 +1,35 @@
-# ci.yml
 name: CI Pipeline
 
-# Ejecuta la acción en cada push o pull request a la rama main
 on:
   push:
     branches:
-      - main
+      - main  # Ejecuta el workflow al hacer push a la rama principal
   pull_request:
     branches:
-      - main
+      - main  # Ejecuta el workflow al abrir un PR hacia la rama principal
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  cypress-tests:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]  # Define sistemas operativos
+        node-version: [14, 16, 18]  # Define versiones de Node.js
+    
     steps:
-      # Paso 1: Configurar el repositorio
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      # Paso 2: Instalar Node.js
+      - name: Check out code
+        uses: actions/checkout@v2  # Clona el repositorio
+        
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Configura Node.js en la versión especificada
         with:
-          node-version: '16'  # Puedes usar la versión que necesites
+          node-version: ${{ matrix.node-version }}
 
-      # Paso 3: Instalar dependencias
       - name: Install dependencies
-        run: npm install
+        run: npm install  # Instala las dependencias del proyecto
+      
+      - name: Install Cypress
+        run: npm install cypress --save-dev  # Instala Cypress como dependencia de desarrollo
 
-      # Paso 4: Ejecutar pruebas
       - name: Run Cypress tests
-        run: npx cypress run --spec 'cypress/e2e/Regression_Test.cy.js' --browser chrome
+        run: npx cypress run  # Ejecuta las pruebas de Cypress
