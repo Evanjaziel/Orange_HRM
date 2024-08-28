@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Evan",
+    "mname": "Jaziel",
+    "lname": "Herrera",
+    "id": "5176",
+    "email": "evanjaziel@hotmail.com",
+    "tel": "3311471815",
+    "dir1": "Jalisco Tonala",
+    "ruta": "madeon.jpg",
+    "genero": "Male",
+    "username": "evan.jaziel",
+    "password": "Password123"
+  },
+  {
+    "name": "Liam",
+    "mname": "Alexander",
+    "lname": "Martinez",
+    "id": "6789",
+    "email": "liam.alexander@gmail.com",
+    "tel": "3325467891",
+    "dir1": "Guadalajara Centro",
+    "ruta": "madeon.jpg",
+    "genero": "Male",
+    "username": "liam.alexander",
+    "password": "Password123"
+  },
+  {
+    "name": "Sofia",
+    "mname": "Isabella",
+    "lname": "Ramirez",
+    "id": "1556",
+    "email": "sofia.isabella@hotmail.com",
+    "tel": "3345123478",
+    "dir1": "Zapopan Norte",
+    "ruta": "madeon.jpg",
+    "genero": "Female",
+    "username": "sofia.isabella",
+    "password": "Password123"
+  },
+  {
+    "name": "Mateo",
+    "mname": "Santiago",
+    "lname": "Gomez",
+    "id": "9123",
+    "email": "mateo.gomez@hotmail.com",
+    "tel": "3312385690",
+    "dir1": "Tlaquepaque Sur",
+    "ruta": "madeon.jpg",
+    "genero": "Male",
+    "username": "mateo.santiago",
+    "password": "Password123"
+  },
+  {
+    "name": "Valentina",
+    "mname": "Camila",
+    "lname": "Lopez",
+    "id": "2345",
+    "email": "valentina.camila@gmail.com",
+    "tel": "3334567890",
+    "dir1": "Zapopan Sur",
+    "ruta": "madeon.jpg",
+    "genero": "Female",
+    "username": "valentina.camila",
+    "password": "Password123"
+  }
+]
