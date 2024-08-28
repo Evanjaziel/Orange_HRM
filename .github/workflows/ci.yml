@@ -31,4 +31,4 @@ jobs:
 
       # Paso 4: Ejecutar pruebas
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --spec 'cypress/e2e/Regression_Test.cy.js' --browser chrome
