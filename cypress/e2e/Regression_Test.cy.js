@@ -1,8 +1,6 @@
 const {Login,Add,search,Admin} = require('../support/POM/POM_OR')
 
 /// <reference types="Cypress"/>
-require('cypress-xpath')
-require('cypress-plugin-tab')
 import 'cypress-file-upload'
 
 const tiempo = 500
