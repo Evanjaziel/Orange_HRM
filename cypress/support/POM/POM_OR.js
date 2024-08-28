@@ -1,5 +1,5 @@
 import 'cypress-file-upload'
-let tiempo=500
+let tiempo=1000
 
 class Loginpage{
 

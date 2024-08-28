@@ -3,7 +3,7 @@ const {Login,Add,search,Admin} = require('../support/POM/POM_OR')
 /// <reference types="Cypress"/>
 import 'cypress-file-upload'
 
-const tiempo = 500
+const tiempo = 1000
 
 describe('REGRESSION TEST FOR ORANGE HRM', () => {
 
@@ -27,16 +27,15 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
 
     })
 
-    it('TESTING THE ADD USER TOOL', () => {
+    it.only('TESTING THE ADD USER TOOL', () => {
 
-        let employee2 = data[0]
+        let employee2 = data[1]
         Login.visit()
         Login.LoginForm("Admin","admin123")
         Add.visit()
         cy.url().should('contains','/addEmployee').wait(tiempo)
         Add.Addlogindetails(employee2.ruta, employee2.name, employee2.mname, employee2.lname, employee2.id, employee2.username,
-        employee2.password,employee2.password
-        )
+        employee2.password,employee2.password)
         Login.Logout()
         Login.LoginForm(employee2.username, employee2.password)
 
