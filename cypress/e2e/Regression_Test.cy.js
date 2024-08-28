@@ -27,7 +27,7 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
 
     })
 
-    it.only('TESTING THE ADD USER TOOL', () => {
+    it('TESTING THE ADD USER TOOL', () => {
 
         let employee2 = data[1]
         Login.visit()
