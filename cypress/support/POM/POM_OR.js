@@ -78,7 +78,7 @@ class AddEmployeepage{
         this.get.Userfield().type(user).wait(tiempo)
         this.get.Passwordfield().type(pass).wait(tiempo)
         this.get.ConfirmPasswordfield().type(cpass).wait(tiempo)
-        this.get.savebutton().click().wait(tiempo)
+        this.get.savebutton().click().wait(2500)
 
 
     }
