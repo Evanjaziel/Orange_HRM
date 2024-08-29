@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]  # Matriz con 3 sistemas operativos
-        node-version: [16]  # Puedes definir más versiones de Node.js si lo deseas
+        node-version: [18]  # Puedes definir más versiones de Node.js si lo deseas
 
 
     steps:
