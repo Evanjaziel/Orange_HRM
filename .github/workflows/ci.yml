@@ -10,8 +10,6 @@ on:
   pull_request:
     branches:
       - main
-      - QA
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
