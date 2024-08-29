@@ -12,7 +12,13 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]  # Matriz con 3 sistemas operativos
+        node-version: [16]  # Puedes definir más versiones de Node.js si lo deseas
+
 
     steps:
       # Paso 1: Configurar el repositorio
@@ -23,7 +29,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Puedes usar la versión que necesites
+          node-version: ${{ matrix.node-version }}  # Puedes usar la versión que necesites
 
       # Paso 3: Instalar dependencias
       - name: Install dependencies
