@@ -37,7 +37,7 @@ jobs:
         run: npm install
 
       # Condicional para la rama "smoke"
-      - name: Run tests for QA
+      - name: Run tests for smoke
         if: github.ref == 'refs/heads/smoke'
         run: |
           echo "Running tests for smoke branch..."
