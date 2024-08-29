@@ -11,8 +11,6 @@ describe('SOMOKE TESTING FOR DE ADD ADMIN USERS TOOL', () => {
     
     it('TESTING ALL KIND OF USERS AND MAKETHEM ADMIN USERS', () => {
         
-
-        // Código para ejecutar una vez antes de todas las pruebas
         cy.fixture('employee').then(function(data){
             globalThis.data=data
             cy.wrap(data).each(($el,index)=>{
