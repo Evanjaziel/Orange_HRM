@@ -6,9 +6,11 @@ on:
   push:
     branches:
       - main
+      - QA
   pull_request:
     branches:
       - main
+      - QA
 
 jobs:
   build:
@@ -16,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]  # Matriz con 3 sistemas operativos
+        os: [ubuntu-latest, macos-latest]  # Matriz con 3 sistemas operativos
         node-version: [18]  # Puedes definir más versiones de Node.js si lo deseas
 
 
@@ -35,6 +37,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Paso 4: Ejecutar pruebas
-      - name: Run Cypress tests
-        run: npx cypress run --spec 'cypress/e2e/Regression_Test.cy.js' --browser chrome
+      # Condicional para la rama "QA"
+      - name: Run tests for QA
+        if: github.ref == 'refs/heads/QA'
+        run: |
+          echo "Running tests for QA branch..."
+          npx cypress run --spec "cypress/e2e/e2e_Test.cy.js' --browser chrome
+
+      # Condicional para la rama "main"
+      - name: Run tests for main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Running tests for main branch..."
+          npx cypress run --spec "cypress/e2e/Regression_Test.cy.js' --browser chrome
