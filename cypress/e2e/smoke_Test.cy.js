@@ -2,7 +2,7 @@ const {Login,Add,search,Admin} = require('../support/POM/POM_OR')
 /// <reference types="Cypress"/>
 import 'cypress-file-upload'
 
-const tiempo = 1000
+const tiempo = 800
 
 describe('SOMOKE TESTING FOR THE ADD ADMIN USERS TOOL', () => {
 

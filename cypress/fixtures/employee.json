@@ -25,6 +25,19 @@
     "genero": "Male",
     "username": "mateo.gomez2024",
     "password": "Password101"
+  },
+  {
+    "name": "Valentina",
+    "mname": "Camila",
+    "lname": "Lopez",
+    "id": "5234545",
+    "email": "valentina.camila2024@gmail.com",
+    "tel": "3334567890",
+    "dir1": "Zapopan Sur",
+    "ruta": "madeon.jpg",
+    "genero": "Female",
+    "username": "valentina.camila2024",
+    "password": "Password202"
   }
 
 ]
