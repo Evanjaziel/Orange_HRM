@@ -24,11 +24,9 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
         cy.title().should('eq','OrangeHRM').wait(tiempo)
         Login.LoginForm("Admin","admin123")
 
-
     })
 
     it('TESTING THE ADD USER TOOL', () => {
-
         let employee2 = data[1]
         Login.visit()
         Login.LoginForm("Admin","admin123")
@@ -38,7 +36,6 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
         employee2.password,employee2.password)
         Login.Logout()
         Login.LoginForm(employee2.username, employee2.password)
-
 
     });
 
@@ -58,9 +55,7 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
         search.deleteemployee()
         
 
-
     });
-
   
 
 })

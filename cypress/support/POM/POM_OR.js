@@ -52,8 +52,6 @@ class AddEmployeepage{
         ConfirmPasswordfield: () => cy.get(".oxd-input").eq(7),
         savebutton: () => cy.get(".oxd-button").eq(1),
 
-
-
     }
 
     Addform(image,fname,mname,lname,id){
@@ -99,18 +97,13 @@ class Employeelistpage{
         modifybutton: () => cy.get(".bi-pencil-fill").eq(0),
         deletebutton: () => cy.get(".bi-trash").eq(0),
         confirmdeletebutton: () => cy.get(".oxd-button--label-danger"),
-        
-
-           }
+                 
+    }
 
     SearchEmployee(name,id){
         this.get.Employeenamefield().type(name).wait(tiempo)
         this.get.EmployeeIdfield().type(id).wait(tiempo)
         this.get.searchbutton().click().wait(tiempo)
-
-
-
-
     }
 
     modifyemployee(){
@@ -121,7 +114,6 @@ class Employeelistpage{
         this.get.confirmdeletebutton().click().wait(tiempo)
     }
 
-  
 }
 
 class Systemuserspage{
@@ -131,6 +123,7 @@ class Systemuserspage{
     }
 
     get = {
+
 
         searchusername: () => cy.get(".oxd-input").eq(1),
         searchbutton: () => cy.get(".oxd-button").eq(1),
@@ -147,8 +140,7 @@ class Systemuserspage{
         Passwordfield2: () => cy.get(".oxd-input").eq(3),
         savebutton: () => cy.get(".oxd-button").eq(1),
 
-
-           }
+    }
 
     SearchEmployee(name){
         this.get.searchusername().type(name).wait(tiempo)
@@ -174,14 +166,9 @@ class Systemuserspage{
         this.get.Passwordfield2().type(pass2).wait(tiempo)
         this.get.savebutton().click().wait(tiempo)
 
-
     }
-
   
 }
-
-
-
 
 export const Login = new Loginpage;
 export const Add = new AddEmployeepage;

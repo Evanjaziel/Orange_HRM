@@ -4,12 +4,9 @@ import 'cypress-file-upload'
 
 const tiempo = 1000
 
-describe('SOMOKE TESTING FOR DE ADD ADMIN USERS TOOL', () => {
+describe('SOMOKE TESTING FOR THE ADD ADMIN USERS TOOL', () => {
 
-
-  
-    
-    it('TESTING ALL KIND OF USERS AND MAKETHEM ADMIN USERS', () => {
+     it('TESTING ALL KIND OF USERS AND MAKETHEM ADMIN USERS', () => {
         
         cy.fixture('employee').then(function(data){
             globalThis.data=data
