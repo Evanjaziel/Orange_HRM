@@ -43,15 +43,4 @@ describe('TEST THE ORANGE HRM PAGE FOR E2E TESTING', () => {
     
   })
 
- 
-
-
-
-
-
-
-
-
-  
-
-})
+ })

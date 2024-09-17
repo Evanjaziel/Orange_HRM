@@ -7,11 +7,10 @@ on:
     branches:
       - main
       - QA
+      - smoke
   pull_request:
     branches:
       - main
-      - QA
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -36,6 +35,13 @@ jobs:
       # Paso 3: Instalar dependencias
       - name: Install dependencies
         run: npm install
+
+      # Condicional para la rama "smoke"
+      - name: Run tests for smoke
+        if: github.ref == 'refs/heads/smoke'
+        run: |
+          echo "Running tests for smoke branch..."
+          npx cypress run --spec "cypress/e2e/smoke_Test.cy.js" --browser chrome
 
       # Condicional para la rama "QA"
       - name: Run tests for QA
