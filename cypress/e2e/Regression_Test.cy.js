@@ -41,7 +41,7 @@ describe('REGRESSION TEST FOR ORANGE HRM', () => {
 
     it('TESTING THE SEARCH TOOL', () => {
 
-        let employee1 = data[3]
+        let employee1 = data[2]
         Login.visit()
         Login.LoginForm("Admin","admin123")
         Add.visit()
