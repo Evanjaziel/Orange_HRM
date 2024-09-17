@@ -42,7 +42,7 @@ jobs:
           echo "Running tests for QA branch..."
           npx cypress run --spec "cypress/e2e/e2e_Test.cy.js" --browser chrome
 
-      # Condicional para la rama "main"
+      # Condicional para la rama con pull request "main"
       - name: Run tests for main
         if: github.ref == 'refs/heads/main'
         run: |
