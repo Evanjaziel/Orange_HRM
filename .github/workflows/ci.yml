@@ -52,7 +52,7 @@ jobs:
 
       # Condicional para la rama "main"
       - name: Run tests for main
-        if: github.ref == 'refs/heads/main'
+        if: github.event_name == 'pull_request'
         run: |
           echo "Running tests for main branch..."
           npx cypress run --spec "cypress/e2e/Regression_Test.cy.js" --browser chrome
